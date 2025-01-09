@@ -1,0 +1,72 @@
+[
+    {
+        "first_name": "Nadir ",
+        "last_name": "Piri",
+        "username": "nadir008",
+        "password": "nadir123",
+        "phone": "020202",
+        "age": "18",
+        "email": "nadir@jwq",
+        "role": "customer"
+    },
+    {
+        "first_name": "Ulvi",
+        "last_name": "Sabanov",
+        "username": "123456789",
+        "password": "123456789",
+        "phone": "12435671",
+        "age": "19",
+        "email": "@,;s,r.com",
+        "role": "seller"
+    },
+    {
+        "first_name": "Eldar",
+        "last_name": "Novruzlu",
+        "username": "eldar1234",
+        "password": "eldar1234",
+        "phone": "123456789",
+        "age": "18",
+        "email": "eldqar@mail.com",
+        "role": "seller"
+    },
+    {
+        "first_name": "Ali",
+        "last_name": "Gojayev",
+        "username": "Aliqwertyuiop",
+        "password": "23232929",
+        "phone": "1273612",
+        "age": "18",
+        "email": "aligodzhayev@gmail.com",
+        "role": "seller"
+    },
+    {
+        "first_name": "nn",
+        "last_name": "asdf",
+        "username": "nasdrfyt",
+        "password": "12345678",
+        "phone": "12333",
+        "age": "18",
+        "email": "nana@gmail.com",
+        "role": "customer"
+    },
+    {
+        "first_name": "xa",
+        "last_name": "23457u8i",
+        "username": "2wertgyhj",
+        "password": "qwertyui",
+        "phone": "123455",
+        "age": "18",
+        "email": "@dbjj",
+        "role": "seller"
+    },
+    {
+        "first_name": "",
+        "last_name": "",
+        "username": "123456789",
+        "password": "123456789",
+        "phone": "1",
+        "age": "18",
+        "email": "@",
+        "role": "customer"
+    }
+]
