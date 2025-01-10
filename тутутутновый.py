@@ -31,7 +31,7 @@ class SellerPanel(tk.Tk):
         super().__init__()
         self.title("Seller Panel")
         self.geometry("400x300")
-
+        self.username=username
         tk.Label(self, text=f"Welcome to TechnoShop, {username} (Seller)").pack(pady=10)
         tk.Button(self, text="Add Product", command=self.add_product).pack(pady=10)
         tk.Button(self, text="View Products", command=self.view_products).pack(pady=10)
@@ -61,7 +61,20 @@ class Addp(tk.Tk):
         self.geometry("800x800")
         self.newbtnbtn=tk.Button(self,text="ADD IPHONE 15 PRO MAX",command=self.addiphone15)
         self.newbtnbtn.pack(pady=20)
+        self.newbtnbtn2 = tk.Button(self, text="ADD SAMSUNG WATCH", command=self.addss)
+        self.newbtnbtn2.pack(pady=40)
+        tk.Button(self,text="Go back",command=self.back).pack(pady=10)
 
+
+    def back(self):
+        self.destroy()
+        SellerPanel("username").mainloop()
+
+    def addss(self):
+        self.destroy()
+
+        new_panel = Newpanel()
+        new_panel.add_product2()
 
     def addiphone15(self):
 
@@ -98,7 +111,7 @@ class Newpanel(tk.Tk):
         self.geometry("800x800")
         self.display_initial_products()
 
-        tk.Button(self, text="Go back", command=self.back).place(x=400,y=700)
+        tk.Button(self, text="Go back", command=self.back).place(x=700,y=700)
 
     def display_initial_products(self):
         self.watch = tk.PhotoImage(file="applewatchson.png")
@@ -128,6 +141,13 @@ class Newpanel(tk.Tk):
         self.iphone15_label.place(x=0, y=400)
         self.i15button = tk.Button(self, text="BUY AN IPHONE 15 PRO MAX", command=self.delete15)
         self.i15button.place(x=0, y=700)
+    def add_product2(self):
+        self.ss = tk.PhotoImage(file="watchsamsung.png")
+        self.ss_resized = self.ss.subsample(6, 6)
+        self.ss_label = tk.Label(self, image=self.ss_resized)
+        self.ss_label.place(x=300, y=400)
+        self.ss_btn = tk.Button(self, text="BUY SAMSUNG WATCH", command=self.deletess)
+        self.ss_btn.place(x=300, y=700)
 
 
 
@@ -137,16 +157,20 @@ class Newpanel(tk.Tk):
     def deletewatch(self):
         self.watch_label.destroy()
         self.wbutton.destroy()
-        messagebox.showinfo("SOLD","CONGRATULATIONS YOU BOUGTH AN APPLE WATCH")
+        messagebox.showinfo("SOLD","CONGRATULATIONS YOU BOUGTH  APPLE WATCH")
+    def deletess(self):
+        self.ss_label.destroy()
+        self.ss_btn.destroy()
+        messagebox.showinfo("SOLD","CONGRATULATIONS YOU BOUGTH SAMSUNG WATCH")
 
     def delete15(self):
         self.iphone15_label.destroy()
         self.i15button.destroy()
-        messagebox.showinfo("SOLD", "CONGRATULATIONS YOU BOUGTH AN IPHONE 15 PRO MAX")
+        messagebox.showinfo("SOLD", "CONGRATULATIONS YOU BOUGTH  IPHONE 15 PRO MAX")
     def deletephone(self):
         self.iphone_label.destroy()
         self.ibutton.destroy()
-        messagebox.showinfo("SOLD","CONGRATULATIONS YOU BOUGTH AN IPHONE 16")
+        messagebox.showinfo("SOLD","CONGRATULATIONS YOU BOUGTH  IPHONE 16")
 
     def deletesamsung(self):
         self.samsung_label.destroy()
